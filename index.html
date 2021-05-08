@@ -1,91 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <link
-      rel="apple-touch-icon"
-      type="image/png"
-      href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png"
-    />
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
     <meta name="apple-mobile-web-app-title" content="CodePen" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico"
-    />
-    <link
-      rel="mask-icon"
-      type=""
-      href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
-      color="#111"
-    /> 
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
     <title>Happy Mother's day!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      h1 {
-         font-size: 50px;
-      }
-      p {
-         font-size: 20px;
-      }
-      * {
-         font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-      }
-      canvas,
-      body,
-      html {
-        background: transparent !important;
-      }
-      .color-01 {
-        color: #ff1461;
-      } /* Red */
-      .color-02 {
-        color: #ff7c72;
-      } /* Orange */
-      .color-03 {
-        color: #fbf38c;
-      } /* Yellow */
-      .color-04 {
-        color: #a6ff8f;
-      } /* Citrus */
-      .color-05 {
-        color: #18ff92;
-      } /* Green */
-      .color-06 {
-        color: #1ce2b2;
-      } /* Darkgreen */
-      .color-07 {
-        color: #5ef3fb;
-      } /* Turquoise */
-      .color-08 {
-        color: #61c3ff;
-      } /* Lightblue */
-      .color-09 {
-        color: #5a87ff;
-      } /* Blue */
-      .color-10 {
-        color: #8453e3;
-      } /* Purple */
-      .color-11 {
-        color: #c26eff;
-      } /* Lavender */
-      .color-12 {
-        color: #fb89fb;
-      } /* Pink */
+        body {
+            padding-top: 30vh;
+            background: #fcd9ff !important;
+            background-size: cover;
+        }
+        
+        .center {
+            height: 400px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        span.type {
+            margin: 0 auto;
+            width: 200px;
+            margin-top: 100px;
+            color: black;
+        }
+        
+        span.type::after {
+            content: "|";
+            display: inline;
+            color: black;
+            animation: blink 0.7s infinite;
+        }
+        /*Removes cursor that comes with typed.js*/
+        
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-moz-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        h1 {
+            font-size: 50px;
+        }
+        
+        p {
+            font-size: 20px;
+        }
+        
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+        
+        canvas,
+        html {
+            background: transparent !important;
+        }
+        
+        .color-01 {
+            color: #ff1461;
+        }
+        /* Red */
+        
+        .color-02 {
+            color: #ff7c72;
+        }
+        /* Orange */
+        
+        .color-03 {
+            color: #fbf38c;
+        }
+        /* Yellow */
+        
+        .color-04 {
+            color: #a6ff8f;
+        }
+        /* Citrus */
+        
+        .color-05 {
+            color: #18ff92;
+        }
+        /* Green */
+        
+        .color-06 {
+            color: #1ce2b2;
+        }
+        /* Darkgreen */
+        
+        .color-07 {
+            color: #5ef3fb;
+        }
+        /* Turquoise */
+        
+        .color-08 {
+            color: #61c3ff;
+        }
+        /* Lightblue */
+        
+        .color-09 {
+            color: #5a87ff;
+        }
+        /* Blue */
+        
+        .color-10 {
+            color: #8453e3;
+        }
+        /* Purple */
+        
+        .color-11 {
+            color: #c26eff;
+        }
+        /* Lavender */
+        
+        .color-12 {
+            color: #fb89fb;
+        }
+        /* Pink */
     </style>
-  </head>
+</head>
 
-  <body translate="no">
+<body translate="no" onclick="playAudio()">
     <center>
-      <h1>Happy Mother's Day!</h1>
-      <p>You <span id="typed"></span></p>
-      <p style="font-size: 15px;">Click to have <i>fun!!!!</p>
+        <h1>Happy Mother's Day!</h1>
+        <p>You <span id="typed"></span></p>
+        <p style="font-size: 15px;">Click to have <i>fun!!!!</p>
     </center>
     <canvas
       class="fireworks"
       style="position: fixed; top: 0; left: 0; width: 100%; height: 100%"
     ></canvas>
+    <audio id="myAudio">
+      <source src="https://padlet-uploads.storage.googleapis.com/446844750/ca57ed6d83fff9890b4c9f2356e4e0c0/Single_Firework___Sound_Effect_HD__1_.mp3" type="audio/ogg">
+    </audio>
+    <script>
+    var x = document.getElementById("myAudio"); 
+    
+    function playAudio() { 
+      x.currentTime = 0;
+      x.play();  
+    } 
+    
+    </script>
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js'></script>
 
     <script src="https://codepen.io/juliangarnier/pen/yMLaRG.js"></script>
     <script id="rendered-js">
@@ -243,8 +335,8 @@
       autoClick();
       setCanvasSize();
       window.addEventListener("resize", setCanvasSize, false);
-      Typed.new('.type', {
-      strings: ["neighbor", "family", "team", "community"],
+      Typed.new('#typed', {
+      strings: [" are the best", "cook awesome food", "make me feel good"],
       stringsElement: null,
       // typing speed
       typeSpeed: 60,
@@ -258,10 +350,6 @@
       loop: true,
       // false = infinite
       loopCount: 5,
-      // show cursor
-      showCursor: false,
-      // character for cursor
-      cursorChar: "|",
       // attribute to type (null == text)
       attr: null,
       // either html or text
